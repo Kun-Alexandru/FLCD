@@ -125,7 +125,7 @@ public class Main {
 
                 case 8:
 
-
+                    // Too many empty lines
 
                     Grammar grammar2 = new Grammar("Input_Output/G2.txt");
                     LR lrAlg2 = new LR(grammar2);

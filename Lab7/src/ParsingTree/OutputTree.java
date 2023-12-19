@@ -71,7 +71,7 @@ public class OutputTree {
 
         // If the symbol is a terminal, then we only need to set for it the rightSibling
         // It cannot be a parent for any other node in the tree
-        if(this.grammar.getTerminals().contains(currentSymbol)){
+        if(this.grammar.getTerminals().contains(currentSymbol)){ // Could have made a method to compute the steps which are common in both cases, to avoid repetition
 
             // We create a new node in our tree with the current symbol
             ParsingTreeRow node = new ParsingTreeRow(currentSymbol);
@@ -148,7 +148,7 @@ public class OutputTree {
             for(ParsingTreeRow n: this.treeList){
                 if(n.getLevel() == i){
                     System.out.println(n);
-                    writeToFile(filePath, n.toString());
+                    writeToFile(filePath, n.toString()); // Good - Write node to the file
                 }
             }
         }
