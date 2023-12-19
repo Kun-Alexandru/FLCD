@@ -170,6 +170,9 @@ public class LR {
             // We initialize the shifts list, in case there will be the case to add them.
             row.shifts = new ArrayList<>();
 
+
+            // Could have made a switch treating all the cases, instead of nested if's
+            
             // If we have any of the two conflicts, we display the state and the symbol and stop the algorithm
             // If we have conflicts we cant go further
             if (state.getStateActionType() == StateActionType.SHIFT_REDUCE_CONFLICT || state.getStateActionType() == StateActionType.REDUCE_REDUCE_CONFLICT) {
